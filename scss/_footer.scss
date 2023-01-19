@@ -1,0 +1,44 @@
+.footer {
+  margin-bottom: 30px;
+}
+.footer-top {
+  display: flex;
+
+  margin-right: -7.5px;
+  margin-left: -7.5px;
+
+  @include md {
+    @media (max-width: ($md - $diff)) {
+      flex-wrap: wrap;
+    }
+  }
+}
+.footer-top__item {
+  width: 33.33%;
+  padding: 0 7.5px;
+
+  color: $color-light;
+
+  @include md {
+    @media (max-width: ($md - $diff)) {
+      width: 33.33%;
+    }
+  }
+  @include md-xs {
+    @media (max-width: ($md - $diff)) and (min-width: $xs) {
+      flex: 50%;
+    }
+  }
+  @include xs {
+    @media (max-width: ($xs - $diff)) {
+      width: 100%;
+    }
+  }
+}
+.footer-bottom {
+  text-align: center;
+}
+.footer-bottom h3 {
+  max-width: 300px;
+  margin: 0 auto;
+}

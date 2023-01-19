@@ -1,0 +1,24 @@
+.right {
+  order: 3;
+
+  width: 240px;
+
+  @include lg-md {
+    @media (max-width: ($lg - $diff)) and (min-width: $md) {
+      order: 3;
+
+      width: 100%;
+    }
+  }
+  @include md-xs {
+    @media (max-width: ($md - $diff)) and (min-width: $xs) {
+      width: 50%;
+      padding-right: 7.5px;
+    }
+  }
+  @include xs {
+    @media (max-width: ($xs - $diff)) {
+      width: 100%;
+    }
+  }
+}
